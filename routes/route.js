@@ -8,5 +8,14 @@ router.get('/', (req, res)=>{
 router.get('/register', (req, res)=>{
     res.render('register');
 });
+router.get('/login', (req, res)=>{
+    res.render('login');
+});
+router.get('/dashboard', (req, res) => {
+    const userName = req.query.name; 
+    res.render('dashboard', { userName: userName });
+  });
+  
+
 
 module.exports = router;
