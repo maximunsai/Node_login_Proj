@@ -22,7 +22,6 @@ app.use(express.json());
 app.set('view engine', 'hbs');  
 
 
-
 app.listen(port, ()=>{
     console.log(`listening to the port ${port}`)
 })

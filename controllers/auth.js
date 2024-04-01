@@ -1,5 +1,6 @@
 const db = require('../db');
 const jwt = require('jsonwebtoken');
+const jwtSecret = process.env.JWT_TOKEN;
 const bcrypt = require('bcrypt');
 
 db.connect()
@@ -60,5 +61,17 @@ exports.login = (req, res) => {
     }
   });
 };
+
+exports.getAllUsers = (req,res)=>{
+  db.query('SELECT * FROM users', (error, result)=>{
+    if(error){
+      console.error(error);
+      return res.status(400).json({message: "Error while fetching users.."});
+    }else{
+      // return res.status(200).json({message:"Users fetched Successfully..."});
+      return res.send(result.rows);
+    };
+  });
+} 
 
 
