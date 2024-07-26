@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -28,4 +28,40 @@
         crossorigin="anonymous"></script>
 </body>
 
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="Saikiran.pdf" class="btn">Resume</a>
+      </nav>
+
+      <div class="content">
+        <span class="title">Web Developer</span>
+        <h1>Hello, I’m <span>{{ userName }} </span></h1>
+        <p>
+          I’m working on a professional, visually sophisticated and
+          technologically proficient, responsive and multi-functional React
+          Components.
+        </p>
+        <a href="Saikiran.pdf" class="btn" download="Saikiran.pdf">Download CV</a>
+      </div>
+      <img src="/logo1.jfif" class="logo" />
+    </div>
+  </body>
 </html>
